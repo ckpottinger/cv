@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FORTRESS Marriage Assessment</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .category { margin-top: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>FORTRESS Marriage Assessment</h1>
+  <form id="assessmentForm">
+    <!-- Fasting and Prayer -->
+    <div class="category" id="fasting">
+      <h3>Fasting and Prayer</h3>
+      <label>1. How consistently do you and your spouse pray together?
+        <select name="q1" required>
+          <option value="">Select</option>
+          <option value="5">Always</option>
+          <option value="4">Often</option>
+          <option value="3">Sometimes</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+      <label>2. How frequently do you fast together for spiritual growth?
+        <select name="q2" required>
+          <option value="">Select</option>
+          <option value="5">Regularly</option>
+          <option value="4">Often</option>
+          <option value="3">Occasionally</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+      <label>3. How supported do you feel by your spouse in your personal devotional life?
+        <select name="q3" required>
+          <option value="">Select</option>
+          <option value="5">Fully supported</option>
+          <option value="4">Mostly supported</option>
+          <option value="3">Somewhat supported</option>
+          <option value="2">Not very supported</option>
+          <option value="1">Hardly supported</option>
+          <option value="0">Not supported at all</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Openness and Honesty -->
+    <div class="category" id="openness">
+      <h3>Openness and Honesty</h3>
+      <label>4. How transparent are you with each other about personal struggles?
+        <select name="q4" required>
+          <option value="">Select</option>
+          <option value="5">Completely</option>
+          <option value="4">Mostly</option>
+          <option value="3">Somewhat</option>
+          <option value="2">Rarely</option>
+          <option value="1">Hardly ever</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+      <label>5. How safe do you feel sharing your honest feelings?
+        <select name="q5" required>
+          <option value="">Select</option>
+          <option value="5">Very safe</option>
+          <option value="4">Mostly safe</option>
+          <option value="3">Somewhat safe</option>
+          <option value="2">Not very safe</option>
+          <option value="1">Hardly safe</option>
+          <option value="0">Not safe at all</option>
+        </select>
+      </label>
+      <label>6. How often do you discuss finances or difficult topics openly?
+        <select name="q6" required>
+          <option value="">Select</option>
+          <option value="5">Very often</option>
+          <option value="4">Often</option>
+          <option value="3">Sometimes</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Reconciliation after a Dispute -->
+    <div class="category" id="reconciliation">
+      <h3>Reconciliation after a Dispute</h3>
+      <label>7. How quickly do you resolve conflicts?
+        <select name="q7" required>
+          <option value="">Select</option>
+          <option value="5">Right away</option>
+          <option value="4">Within a day</option>
+          <option value="3">Within a few days</option>
+          <option value="2">After a week</option>
+          <option value="1">Rarely</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+      <label>8. When you apologize, does your spouse accept it sincerely?
+        <select name="q8" required>
+          <option value="">Select</option>
+          <option value="5">Always</option>
+          <option value="4">Usually</option>
+          <option value="3">Sometimes</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+      <label>9. Do you forgive each other and move on without resentment?
+        <select name="q9" required>
+          <option value="">Select</option>
+          <option value="5">Always</option>
+          <option value="4">Usually</option>
+          <option value="3">Sometimes</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Trust -->
+    <div class="category" id="trust">
+      <h3>Trust</h3>
+      <label>10. How confident are you in your spouse's faithfulness?
+        <select name="q10" required>
+          <option value="">Select</option>
+          <option value="5">Completely</option>
+          <option value="4">Mostly</option>
+          <option value="3">Somewhat</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+      <label>11. How reliable is your spouse in keeping promises?
+        <select name="q11" required>
+          <option value="">Select</option>
+          <option value="5">Always</option>
+          <option value="4">Often</option>
+          <option value="3">Sometimes</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+      <label>12. How comfortable are you sharing sensitive information with your spouse?
+        <select name="q12" required>
+          <option value="">Select</option>
+          <option value="5">Very comfortable</option>
+          <option value="4">Mostly comfortable</option>
+          <option value="3">Somewhat comfortable</option>
+          <option value="2">Not very comfortable</option>
+          <option value="1">Uncomfortable</option>
+          <option value="0">Very uncomfortable</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Respect -->
+    <div class="category" id="respect">
+      <h3>Respect</h3>
+      <label>13. How often do you speak kindly to one another?
+        <select name="q13" required>
+          <option value="">Select</option>
+          <option value="5">Always</option>
+          <option value="4">Usually</option>
+          <option value="3">Sometimes</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+      <label>14. Do you feel your opinions are valued?
+        <select name="q14" required>
+          <option value="">Select</option>
+          <option value="5">Always</option>
+          <option value="4">Often</option>
+          <option value="3">Sometimes</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+      <label>15. How respectful are you during disagreements?
+        <select name="q15" required>
+          <option value="">Select</option>
+          <option value="5">Very respectful</option>
+          <option value="4">Mostly respectful</option>
+          <option value="3">Somewhat respectful</option>
+          <option value="2">Not very respectful</option>
+          <option value="1">Rarely respectful</option>
+          <option value="0">Disrespectful</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Emotionally supporting your spouse -->
+    <div class="category" id="emotional">
+      <h3>Emotionally Supporting Your Spouse</h3>
+      <label>16. How attentive are you to each other's emotional needs?
+        <select name="q16" required>
+          <option value="">Select</option>
+          <option value="5">Extremely attentive</option>
+          <option value="4">Very attentive</option>
+          <option value="3">Somewhat attentive</option>
+          <option value="2">Rarely attentive</option>
+          <option value="1">Hardly attentive</option>
+          <option value="0">Not attentive</option>
+        </select>
+      </label>
+      <label>17. How often do you express appreciation to your spouse?
+        <select name="q17" required>
+          <option value="">Select</option>
+          <option value="5">Daily</option>
+          <option value="4">Often</option>
+          <option value="3">Sometimes</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+      <label>18. Do you feel emotionally connected on a regular basis?
+        <select name="q18" required>
+          <option value="">Select</option>
+          <option value="5">Always</option>
+          <option value="4">Usually</option>
+          <option value="3">Sometimes</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Submission -->
+    <div class="category" id="submission">
+      <h3>Submission</h3>
+      <label>19. How willing are you to compromise for the sake of your spouse?
+        <select name="q19" required>
+          <option value="">Select</option>
+          <option value="5">Very willing</option>
+          <option value="4">Willing</option>
+          <option value="3">Somewhat willing</option>
+          <option value="2">Rarely willing</option>
+          <option value="1">Hardly willing</option>
+          <option value="0">Unwilling</option>
+        </select>
+      </label>
+      <label>20. How respectful are you of your spouse's decisions?
+        <select name="q20" required>
+          <option value="">Select</option>
+          <option value="5">Very respectful</option>
+          <option value="4">Mostly respectful</option>
+          <option value="3">Somewhat respectful</option>
+          <option value="2">Not very respectful</option>
+          <option value="1">Rarely respectful</option>
+          <option value="0">Not respectful</option>
+        </select>
+      </label>
+      <label>21. Do you support each other's leadership roles in the family?
+        <select name="q21" required>
+          <option value="">Select</option>
+          <option value="5">Always</option>
+          <option value="4">Usually</option>
+          <option value="3">Sometimes</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Sexually Satisfying your spouse -->
+    <div class="category" id="sexual">
+      <h3>Sexually Satisfying Your Spouse</h3>
+      <label>22. How satisfied are you with your physical intimacy?
+        <select name="q22" required>
+          <option value="">Select</option>
+          <option value="5">Completely satisfied</option>
+          <option value="4">Mostly satisfied</option>
+          <option value="3">Somewhat satisfied</option>
+          <option value="2">Not very satisfied</option>
+          <option value="1">Hardly satisfied</option>
+          <option value="0">Not satisfied</option>
+        </select>
+      </label>
+      <label>23. How often do you communicate about your sexual needs?
+        <select name="q23" required>
+          <option value="">Select</option>
+          <option value="5">Very often</option>
+          <option value="4">Often</option>
+          <option value="3">Sometimes</option>
+          <option value="2">Rarely</option>
+          <option value="1">Almost never</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+      <label>24. Do you feel your spouse is attentive to your level of sexual satisfaction?
+        <select name="q24" required>
+          <option value="">Select</option>
+          <option value="5">Always attentive</option>
+          <option value="4">Mostly attentive</option>
+          <option value="3">Sometimes attentive</option>
+          <option value="2">Rarely attentive</option>
+          <option value="1">Hardly attentive</option>
+          <option value="0">Not attentive</option>
+        </select>
+      </label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="results" style="display:none; margin-top:30px;">
+    <h2>Assessment Results</h2>
+    <p id="summary"></p>
+    <p id="details"></p>
+    <button id="downloadBtn">Download Report</button>
+  </div>
+
+  <script>
+    document.getElementById('assessmentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const scores = {};
+      const categories = {
+        fasting: ['q1','q2','q3'],
+        openness: ['q4','q5','q6'],
+        reconciliation: ['q7','q8','q9'],
+        trust: ['q10','q11','q12'],
+        respect: ['q13','q14','q15'],
+        emotional: ['q16','q17','q18'],
+        submission: ['q19','q20','q21'],
+        sexual: ['q22','q23','q24']
+      };
+      let total = 0;
+      for (const [cat, qs] of Object.entries(categories)) {
+        scores[cat] = qs.reduce((sum, q) => sum + parseInt(form[q].value || 0), 0);
+        total += scores[cat];
+      }
+      const ranges = [
+        {min:105,max:120,text:'Fortified',meaning:'Your marriage reflects strong mutual commitment, spiritual grounding, and emotional intimacy. Keep nourishing the bond.'},
+        {min:90,max:104,text:'Stable',meaning:'A good marriage foundation is present, though some areas need tuning for deeper connection.'},
+        {min:75,max:89,text:'Vulnerable',meaning:'Cracks may be forming in communication, trust, or emotional engagement. Prioritize intentional reconnection.'},
+        {min:60,max:74,text:'Fragile',meaning:'Signs of significant disconnection. Consider seeking support or counseling.'},
+        {min:0,max:59,text:'Critical',meaning:'Your marriage may be at risk. Healing is possible, but will require honest conversation, prayer, and guided support.'}
+      ];
+      const range = ranges.find(r => total >= r.min && total <= r.max);
+      // Determine strongest and weakest categories
+      const catScores = Object.entries(scores).sort((a,b)=>b[1]-a[1]);
+      const strongest = catScores[0];
+      const weakest = catScores[catScores.length-1];
+      document.getElementById('summary').textContent = `Total Score: ${total} - ${range.text}`;
+      document.getElementById('details').textContent = `Strongest pillar: ${capitalize(strongest[0])} (${strongest[1]}) \u2013 Weakest pillar: ${capitalize(weakest[0])} (${weakest[1]}). ${range.meaning}`;
+      document.getElementById('results').style.display='block';
+
+      // Save data for download
+      window.assessmentReport = `FORTRESS Marriage Assessment\nTotal Score: ${total} - ${range.text}\n\nStrongest pillar: ${capitalize(strongest[0])} (${strongest[1]})\nWeakest pillar: ${capitalize(weakest[0])} (${weakest[1]})\n\n${range.meaning}`;
+    });
+
+    document.getElementById('downloadBtn').addEventListener('click', function(){
+      const blob = new Blob([window.assessmentReport], {type:'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'assessment.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    function capitalize(str){
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+  </script>
+</body>
+</html>
